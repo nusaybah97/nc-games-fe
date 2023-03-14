@@ -29,7 +29,6 @@ const Review = () => {
             <br />
             <p>{review.votes} Votes</p>
             <p>{review.comment_count} Comments</p>
-            
         </section>
     )
 }
