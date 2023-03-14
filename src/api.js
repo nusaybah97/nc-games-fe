@@ -9,3 +9,12 @@ export const getReviews = () => {
     return data.reviews
    })
 }
+
+export const getReview = (review_id) => {
+   return axios.get(
+      `https://games-oizc.onrender.com/api/reviews/${review_id}`
+   )
+   .then(({data}) => {
+      return data.review;
+   })
+}

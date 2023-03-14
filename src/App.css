@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
 html {
@@ -8,7 +9,7 @@ html {
 }
 
 .reviewImg {
-  width:100%;
+  width: 80%;
 }
 
 .reviewCard {
@@ -23,4 +24,12 @@ html {
 
 .intro {
   margin: 10px;
+}
+
+.reviewTitle {
+  margin: 10px;
+}
+
+.singleReview {
+  margin: 0px 50px;
 }
