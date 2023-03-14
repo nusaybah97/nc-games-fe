@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { getReview } from "../api"
 import {useParams} from 'react-router-dom'; 
+import Comments from './Comments'
 
 
 const Review = () => {
@@ -19,7 +20,8 @@ const Review = () => {
 
     return isLoading ? (
         <h2 className="loading">Loading...</h2>
-    ) : (
+    ) : ( 
+    <>
         <section className='singleReview'>
             <h3 className='reviewTitle'>{review.title}</h3>
             <img className='reviewImg'src={review.review_img_url} alt={review.title} />
@@ -30,6 +32,8 @@ const Review = () => {
             <p>{review.votes} Votes</p>
             <p>{review.comment_count} Comments</p>
         </section>
+        <Comments />
+    </>
     )
 }
 

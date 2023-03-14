@@ -33,3 +33,19 @@ html {
 .singleReview {
   margin: 0px 50px;
 }
+
+.commentCard{
+  list-style: none;
+}
+
+.username {
+  font-weight:bold;
+}
+
+.singleComment {
+  margin: 0px 50px
+}
+
+.commentsList {
+  padding: 0px;
+}
