@@ -4,38 +4,52 @@
 }
 
 html {
-  background-color: #efe3d2;
+  background-color: #e2e2e2;
   color: #363136;
 }
 
 .reviewImg {
   width: 80%;
-}
+} 
 
 .reviewCard {
   padding: 20px;
   list-style: none;
   margin: 25px 50px;
+  background-color: #e2e2e2;
+  color: #363136;
+  border-radius: 30px;
+  border: 2px solid #689990;
+
 }
+
 
 .reviewList {
   padding: 0px;
 }
 
 .intro {
-  margin: 10px;
+  margin: 10px 20px;
+  font-size: small;
 }
 
 .reviewTitle {
-  margin: 10px;
+  margin: 20px 10px;
 }
 
 .singleReview {
-  margin: 0px 50px;
+  margin: 0px 30px;
+  border: 2px solid #689990;
+  padding: 20px;
+  border-radius: 30px;
 }
 
 .commentCard{
   list-style: none;
+  border-radius: 30px;
+  border: 2px solid #689990;
+  margin: 10px 30px;
+
 }
 
 .username {
@@ -51,11 +65,15 @@ html {
 }
 
 .vote {
-  background-color: #efe3d2;
+  background-color: #e2e2e2;
   color: #363136;
   border: none;
   font-size:x-large;
   font-weight: 800;
+}
+
+.votes {
+  margin-bottom: 0px;
 }
 
 #plus {
@@ -65,3 +83,25 @@ html {
 #minus {
   color:crimson
 }
+
+.cardTitle {
+  color: #363136;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration-color: #689990;
+}
+
+.date {
+  font-size: x-small;
+}
+
+.comment {
+  font-size: small;
+  padding: 0px 15px;
+}
+
+.headerLink {
+  color:#363136;
+  text-decoration-color:#689990;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+

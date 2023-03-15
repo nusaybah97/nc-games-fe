@@ -103,11 +103,11 @@ const ReviewCard = ({review}) => {
 
     return (
         <li className="reviewCard">
-            <Link to={`/reviews/${review.review_id}`} >
-            <h3 className='cardTitle'>{review.title}</h3>
+            <Link className='cardTitle' to={`/reviews/${review.review_id}`} >
+            <h3 className='reviewTitle'>{review.title}</h3>
             </Link>
             <img className="reviewImg" src={review.review_img_url} alt={review.title} />
-            <p>Votes: {review.votes + incVote + decVote}</p> 
+            <p className='votes'>Votes: {review.votes + incVote + decVote}</p> 
             <button onClick={upVote} className='vote' id={plus} type='button'>+</button> 
             <button onClick={downVote} className='vote' id={minus} type='button'>-</button>
             {isError && <p className='votingError'>Something went wrong, please try again later!</p>}
