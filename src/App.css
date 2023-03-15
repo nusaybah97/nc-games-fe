@@ -49,3 +49,19 @@ html {
 .commentsList {
   padding: 0px;
 }
+
+.upVote {
+  background-color: #efe3d2;
+  color: #363136;
+  border: none;
+  font-size:x-large;
+  font-weight: 800;
+}
+
+#plus {
+  color: green;
+}
+
+#minus {
+  color:crimson
+}
