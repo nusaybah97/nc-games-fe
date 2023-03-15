@@ -105,3 +105,12 @@ html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.votingError {
+  padding: 5px;
+  font-size: x-small;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 0.5px solid rgba(220, 20, 60, 0.445);
+  border-radius: 30px;
+}
+
+
