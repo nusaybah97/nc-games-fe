@@ -2,21 +2,31 @@ import { useState } from "react"
 import {addComment} from '../api'
 import { useParams } from "react-router-dom"
 
-const AddComment = ({setComments, setClicked}) => {
+const AddComment = ({setComments, setClicked, setIsPosted}) => {
     const [user, setUser] = useState('')
     const [comment, setComment] = useState('')
     const {review_id} = useParams()
+    const [isError, setIsError] = useState(false)
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        addComment(review_id, user, comment).then((newComment) => {
+        setIsPosted(false)
+        setIsError(false)
+        addComment(review_id, user, comment)
+        .then((newComment) => {
+            setIsPosted(true)
+            setClicked(false)
+            setComment('')
+            setUser('')
             setComments((currentComments) => {
                 return [newComment, ...currentComments]
             })
         })
-        setClicked(false)
-        setComment('')
-        setUser('')
+        .catch((err) => {
+            setIsError(true)
+            setIsPosted(false)
+            setClicked(true)
+        })
     }
 
 
@@ -28,6 +38,7 @@ const AddComment = ({setComments, setClicked}) => {
         <input required className="commentInput" type="text" id='username' value={user} onChange={(event) => {
             setUser(event.target.value)
         }} />
+        {isError && <p className="usernameError">Please enter a valid username</p>}
         </section>
 
         <section>
