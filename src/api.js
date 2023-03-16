@@ -39,3 +39,12 @@ export const updateVote = (review_id, vote) => {
       return data.review
    })
 }
+
+export const addComment = (review_id, username, body ) => {
+   return axios.post(
+      `https://games-oizc.onrender.com/api/reviews/${review_id}/comments`, {username: username, body: body}
+   )
+   .then(({data}) => {
+      return data.comment
+   })
+}
