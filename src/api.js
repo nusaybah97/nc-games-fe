@@ -27,3 +27,15 @@ export const getComments = (review_id) => {
       return data.comments
    })
 }
+
+export const updateVote = (review_id, vote) => {
+   console.log(vote, 'api')
+   return axios.patch(
+      `https://games-oizc.onrender.com/api/reviews/${review_id}`, {
+         inc_votes: vote
+      }
+   )
+   .then(({data}) => {
+      return data.review
+   })
+}
