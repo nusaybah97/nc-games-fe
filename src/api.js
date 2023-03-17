@@ -1,11 +1,15 @@
 import axios from "axios"
 
-export const getReviews = (category) => {
-   console.log(category)
+export const getReviews = (category, sortBy, orderBy) => {
+   console.log(category, sortBy, orderBy)
    return axios
    .get(
     'https://games-oizc.onrender.com/api/reviews', {
-      params: {category: category}
+      params: {
+      category: category,
+      sort_by: sortBy,
+      order: orderBy
+   }
     }
    )
    .then(({data}) => {

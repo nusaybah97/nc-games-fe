@@ -186,3 +186,27 @@ html {
   justify-content: space-between;
   padding: 10px 50px
 }
+
+
+.sorting {
+  margin-bottom: 25px;
+}
+
+.dropDown {
+  margin: 0px 20px;
+  margin-left: 10px;
+  padding: 3px;
+  background-color: #e2e2e2;
+  color: #363136;
+  border: 2px solid #689990;
+  border-radius: 5px;
+  font-size: medium;
+  font-weight: 600;
+}
+
+.sort {
+  color: #363136;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  font-weight: 800;
+}
