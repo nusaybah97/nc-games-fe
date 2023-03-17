@@ -8,14 +8,14 @@ const Reviews = () => {
     const [isLoading, setIsLoading] = useState(true);
     const {category} = useParams()
 
-    useEffect((category) => {
+    useEffect(() => {
         setIsLoading(true)
-        getReviews()
+        getReviews(category)
         .then((reviews) => {
             setReviews(reviews)
             setIsLoading(false)
         })
-    },[])
+    },[category])
 
     return isLoading ? (
         <h2 className="loading">Loading...</h2>
