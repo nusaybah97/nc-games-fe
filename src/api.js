@@ -10,6 +10,8 @@ export const getReviews = () => {
    })
 }
 
+
+
 export const getReview = (review_id) => {
    return axios.get(
       `https://games-oizc.onrender.com/api/reviews/${review_id}`
