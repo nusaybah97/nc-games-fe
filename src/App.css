@@ -211,10 +211,19 @@ html {
   font-weight: 800;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .categoryList {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+  }
+  .sorting {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .orderBy {
+    margin-left: 35px;
+    margin-top: 10px;
   }
 }
