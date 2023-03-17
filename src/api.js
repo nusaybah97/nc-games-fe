@@ -1,9 +1,12 @@
 import axios from "axios"
 
-export const getReviews = () => {
+export const getReviews = (category) => {
+   console.log(category)
    return axios
    .get(
-    'https://games-oizc.onrender.com/api/reviews'
+    'https://games-oizc.onrender.com/api/reviews', {
+      params: {category: category}
+    }
    )
    .then(({data}) => {
     return data.reviews
@@ -31,7 +34,6 @@ export const getComments = (review_id) => {
 }
 
 export const updateVote = (review_id, vote) => {
-   console.log(vote, 'api')
    return axios.patch(
       `https://games-oizc.onrender.com/api/reviews/${review_id}`, {
          inc_votes: vote
@@ -48,5 +50,14 @@ export const addComment = (review_id, username, body ) => {
    )
    .then(({data}) => {
       return data.comment
+   })
+}
+
+export const getCategories = () => {
+   return axios.get (
+      `https://games-oizc.onrender.com/api/categories`
+   )
+   .then(({data}) =>{
+      return data.categories
    })
 }

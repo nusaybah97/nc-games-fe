@@ -161,3 +161,28 @@ html {
   font-size: small;
   color: crimson;
 }
+
+.nav {
+  border-top: 2px solid #689990;
+  border-bottom: 2px solid #689990;
+  margin: 30px;
+}
+
+.category {
+  list-style: none;
+}
+
+.categoryLink {
+  text-decoration-color: #689990;
+  text-decoration-thickness: 1.5px;
+  color: #363136;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  font-weight: 700;
+}
+
+.categoryList {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px
+}
